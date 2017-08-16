@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+    <div class="app">
+      Parent: {{ myCount }}
+      <app-add-item
+        [count]="myCount"
+        (change)="countChange($event)">
+      </app-add-item>
+    </div>
+
