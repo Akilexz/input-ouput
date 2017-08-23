@@ -8,35 +8,18 @@ import { Item } from '../items';
 })
 export class InventoryCounterComponent implements OnInit {
 
+  @Output()
+  newHeroEvent: EventEmitter<string> = new EventEmitter<string>();
+
+
   constructor() { }
-
-
-  // @Output()
-  // newItemData: EventEmitter<string> = new EventEmitter<string>();
-
-  // @Output()
-  // notify: EventEmitter<string> = new EventEmitter<string>();
 
   ngOnInit() {
   }
-  // addItem(value:string) {
-  //   this.newItemData.emit(value);
-  //   console.log(this.newItemData.emit);
-  // }
-
-  @Output()
-  newHeroEvent: EventEmitter<string> = new EventEmitter<string>();
 
   addNewHero(value:string) {
     this.newHeroEvent.emit(value);
     console.log(this.newHeroEvent.emit(value));
   }
-
-  // heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
-  // addHero(newHero: string) {
-  //   if (newHero) {
-  //     this.heroes.push(newHero);
-  //   }
-  // }
 
 }

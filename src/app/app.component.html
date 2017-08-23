@@ -12,18 +12,9 @@
   [parentMessage]="parentMessage.value"></app-add-item>
 
 
-<!-- <ul>
-  <li *ngFor="let item of items">
-    {{ item.name }}
-  </li>
-</ul> -->
 
 
-
-<ul>Heroes from parent: <li *ngFor="let hero of heroes">{{hero}}</li></ul>
-
-
+  <ul>Heroes from parent: <li *ngFor="let hero of heroes">{{hero}}</li></ul>
   <inventory-counter (newItemData)='onNotify($event)' (addNewHero)='addHero($event)'></inventory-counter>
 
-
- </div>
+</div>
