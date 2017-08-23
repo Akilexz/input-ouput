@@ -15,6 +15,6 @@
 
 
   <ul>Heroes from parent: <li *ngFor="let hero of heroes">{{hero}}</li></ul>
-  <inventory-counter (newItemData)='onNotify($event)' (addNewHero)='addHero($event)'></inventory-counter>
-
+  <inventory-counter (newItemData)='onNotify($event)' (newHeroEvent)='addHero($event)'></inventory-counter>
+binding to the event in the child and the right side is the event handler.
 </div>

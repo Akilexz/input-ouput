@@ -19,7 +19,7 @@ export class InventoryCounterComponent implements OnInit {
 
   addNewHero(value:string) {
     this.newHeroEvent.emit(value);
-    console.log(this.newHeroEvent.emit(value));
+    console.log(value);
   }
 
 }
