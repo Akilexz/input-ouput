@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  padding: .5rem;
+  margin-left: .5rem;
+}
+
+.message {
+  background-color: papayawhip;
+  border: 1px solid azure;
+  margin: 1rem 0;
+  padding: 1rem;
+}

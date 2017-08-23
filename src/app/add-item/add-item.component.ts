@@ -8,26 +8,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AddItemComponent implements OnInit {
 
 
-  constructor() { }
+@Input() parentMessage: string;
+
+@Output()
+childMessage = new EventEmitter<string>();
+
+onChange(value:string){
+  this.childMessage.emit(value);
+}
 
   ngOnInit() {
   }
 
-  @Input()
-  count: number = 0;
 
-  @Output()
-  change: EventEmitter<number> = new EventEmitter<number>();
-
-  increment() {
-    this.count++;
-    this.change.emit(this.count);
-  }
-
-  decrement() {
-    this.count--;
-    this.change.emit(this.count);
-  }
 
 
 }

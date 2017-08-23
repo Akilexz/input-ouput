@@ -1,4 +1,11 @@
+<div class="child">
+  <h2>Add Item Component</h2>
 
-<button (click)="increment()">Add</button>
-<button (click)="decrement()">Subtract</button>
+  <label>Message for the parent<input type="text" #childMessage
+    (keyup)="onChange(childMessage.value)"></label>
 
+  <div class="message">
+    <p>Message from the parent: {{ parentMessage }} </p>
+  </div>
+
+</div>
