@@ -13,7 +13,7 @@ export class AddItemComponent implements OnInit {
 @Output()
 childMessage = new EventEmitter<string>();
 
-onChange(value:string){
+onChange(value: string) {
   this.childMessage.emit(value);
 }
 

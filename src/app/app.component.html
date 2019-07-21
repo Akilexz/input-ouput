@@ -1,20 +1,21 @@
 <div class="parent">
-  <h1>
-    {{title}}
-  </h1>
+    <h1>
+        {{title}}
+    </h1>
 
 
-  <label>Message for the child<input type="text" #parentMessage (keyup)="0"></label>
-  <div class="message">
-    <p>Message from the child: {{ childMessage }}</p>
-  </div>
-  <app-add-item (childMessage)="childMessage=$event"
-  [parentMessage]="parentMessage.value"></app-add-item>
+    <label>Mensaje para el niño<input type="text" #parentMessage (keyup)="0"></label>
+    <div class="message">
+        <p>Mensaje del niño: {{childMessage}}</p>
+    </div>
+    <app-add-item (childMessage)="childMessage=$event" [parentMessage]="parentMessage.value"></app-add-item>
 
 
 
 
-  <ul>Heroes from parent: <li *ngFor="let hero of heroes">{{hero}}</li></ul>
-  <inventory-counter (newItemData)='onNotify($event)' (newHeroEvent)='addHero($event)'></inventory-counter>
-binding to the event in the child and the right side is the event handler.
+    <ul>Héroes de los padres:
+        <li *ngFor="let hero of heroes">{{hero}}</li>
+    </ul>
+    <inventory-counter (newItemData)='onNotify($event)' (newHeroEvent)='addHero($event)'></inventory-counter>
+    El enlace al evento en el elemento secundario y el lado derecho es el controlador de eventos.
 </div>

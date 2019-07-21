@@ -8,12 +8,12 @@ import { Item } from './items';
 })
 
 export class AppComponent {
-  title = '@Input/@Output Demo';
+  title = '@Input/@Output ';
 
 
 
 
-  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  heroes = ['batman', 'superman', 'Flash'];
 
   addHero(newHero: string) {
     console.log('addHero()');
